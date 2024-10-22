@@ -28,7 +28,7 @@ const primary_color = "#9867FF";
     <!-- Navbar -->
     <section class="container py-6 mx-auto ">
         <div class="flex items-center justify-between">
-            <RouterLink>
+            <RouterLink to="/">
                 <img src="@/assets/img/logo.png" alt="">
             </RouterLink>
 
