@@ -1,5 +1,6 @@
 <script setup>
 import Hero from '@/components/Hero.vue';
+import HomeAbout from '@/components/HomeAbout.vue';
 import HomeCard from '@/components/HomeCard.vue';
 
 const homeCards = [
@@ -53,4 +54,5 @@ const homeCards = [
         <HomeCard v-for="(card, index) in homeCards" :key="index" :icon="card.icon" :title="card.title"
             :bgColorClass="card.bgColorClass" :subtitle="card.subtitle" />
     </div>
+    <HomeAbout />
 </template>

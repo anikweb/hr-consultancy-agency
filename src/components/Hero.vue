@@ -1,8 +1,6 @@
 <template>
     <section class="mx-auto " id="hero-section">
 
-
-
     </section>
 </template>
 
