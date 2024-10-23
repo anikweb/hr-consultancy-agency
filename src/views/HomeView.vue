@@ -2,6 +2,9 @@
 import Hero from '@/components/Hero.vue';
 import HomeCard from '@/components/HomeCard.vue';
 import HomeCounter from '@/components/HomeCounter.vue'
+import ButtonLg from '@/components/ButtonLg.vue'
+import QuickLinkBtn from '@/components/QuickLinkBtn.vue'
+import ServiceCard from '@/components/ServiceCard.vue'
 const homeCards = [
     {
         "icon": `<svg xmlns="http://www.w3.org/2000/svg" width="49" height="50" viewBox="0 0 49 50" fill="none">
@@ -63,6 +66,7 @@ const counters = [
 ];
 
 const primaryColor = "#9867FF";
+
 </script>
 
 <template>
@@ -72,7 +76,7 @@ const primaryColor = "#9867FF";
             :bgColorClass="card.bgColorClass" :subtitle="card.subtitle" />
     </div>
     <section class="container px-32 mx-auto">
-        <div>
+        
             <h4 class="text-xl font-bold text-center" :style="`color:${primaryColor}`">/ who we are /</h4>
             <h1 class="mt-2 mb-16 text-5xl font-extrabold text-center">A Leading Global Provider <br> Of Recruitment
             </h1>
@@ -114,13 +118,29 @@ const primaryColor = "#9867FF";
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </div>        
     </section>
     <section class="container mx-auto px-52">
         <div class="grid grid-cols-1 my-24 text-center md:grid-cols-4">
             <HomeCounter v-for="(counter,index) in counters" :key="index" :title="counter.title" :number="counter.number" />
         </div>
+    </section>
+
+    <section class="container px-32 mx-auto">
+       <div class="flex items-center justify-between">
+        <div>
+            <h4 class="text-xl font-bold" :style="`color:${primaryColor}`">/ our services /</h4>
+            <h1 class="mt-2 mb-16 text-5xl font-extrabold">A Leading Global Provider <br>Of Recruitment </h1>
+        </div>
+        <div>
+            <ButtonLg to="/services"  title="See All Services" />
+        </div>
+       </div>
+
+       <div class="grid grid-cols-1 gap-10 my-3 md:grid-cols-3">
+            <ServiceCard :image="'/src/assets/img/services/service_1.jpg'" link="/service" />     
+          
+       </div>
     </section>
 
 </template>

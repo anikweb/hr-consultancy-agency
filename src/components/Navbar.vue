@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink } from 'vue-router'
+import ButtonLg from '@/components/ButtonLg.vue'
 const primary_color = "#9867FF";
 </script>
 
@@ -65,12 +66,9 @@ const primary_color = "#9867FF";
                 </li>
             </ul>
 
-            <RouterLink :class="`text-white rounded-full px-2 py-2 flex items-center`"
-                :style="`background-color:${primary_color}`">
-                <i :class="`p-3 text-gray-900 bg-white rounded-full pi pi-arrow-up-right me-2 `"
-                    :style="`color:${primary_color}`"></i>
-                <span class="text-lg me-4"> Get A Quote</span>
-            </RouterLink>
+            
+            <ButtonLg to="/"  title="Get A Quote" />
+           
         </div>
     </section>
 </template>
