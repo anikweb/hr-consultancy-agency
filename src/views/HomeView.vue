@@ -1,6 +1,5 @@
 <script setup>
 import Hero from '@/components/Hero.vue';
-import HomeAbout from '@/components/HomeAbout.vue';
 import HomeCard from '@/components/HomeCard.vue';
 import HomeCounter from '@/components/HomeCounter.vue'
 const homeCards = [
@@ -46,6 +45,24 @@ const homeCards = [
         "subtitle": "Get o’clock guidance on how to attract more cadidates.",
     },
 ]
+const counters = [
+    {
+        "title" : "Total Freelancer",
+        "number" : "834.0 M"
+    },
+    {
+        "title" : "Positive Review",
+        "number" : "732.0 M"
+    },{
+        "title" : "Order Received",
+        "number" : "90.0 M"
+    },{
+        "title" : "Project Completed",
+        "number" : "232.0 M"
+    },
+];
+
+const primaryColor = "#9867FF";
 </script>
 
 <template>
@@ -54,13 +71,56 @@ const homeCards = [
         <HomeCard v-for="(card, index) in homeCards" :key="index" :icon="card.icon" :title="card.title"
             :bgColorClass="card.bgColorClass" :subtitle="card.subtitle" />
     </div>
-
     <section class="container px-32 mx-auto">
-        <HomeAbout />
-    </section>
+        <div>
+            <h4 class="text-xl font-bold text-center" :style="`color:${primaryColor}`">/ who we are /</h4>
+            <h1 class="mt-2 mb-16 text-5xl font-extrabold text-center">A Leading Global Provider <br> Of Recruitment
+            </h1>
 
+            <div class="grid grid-cols-1 gap-2 md:grid-cols-4">
+                <div class="col-span-2">
+                    <img src="@/assets/img/home-about.jpg" alt="">
+                </div>
+                
+                <div class="col-span-2">
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+                        veritatis et quasi architecto beatae.</p>
+
+
+                    <div class="grid grid-cols-2 my-4 gap-7">
+                        <div class="my-2">
+                            <h2 class="text-2xl font-bold">Profile Highlighter</h2>
+                            <p class="font-thin">Get highlighted by the company that you've been worked.
+                            </p>
+                        </div>
+                        <div class="my-2">
+                            <h2 class="text-2xl font-bold">Find Suitable Candidates</h2>
+                            <p class="font-thin">Get highlighted by the company that
+                                you’ve been worked.
+                            </p>
+                        </div>
+                        <div class="my-2">
+                            <h2 class="text-2xl font-bold">Leadership Training</h2>
+                            <p class="font-thin">Get highlighted by the company that
+                                you’ve been worked.
+                            </p>
+                        </div>
+                        <div class="my-2">
+                            <h2 class="text-2xl font-bold">Fast On Demand Service</h2>
+                            <p class="font-thin">Get highlighted by the company that
+                                you’ve been worked.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="container mx-auto px-52">
-        <HomeCounter />
+        <div class="grid grid-cols-1 my-24 text-center md:grid-cols-4">
+            <HomeCounter v-for="(counter,index) in counters" :key="index" :title="counter.title" :number="counter.number" />
+        </div>
     </section>
 
 </template>
