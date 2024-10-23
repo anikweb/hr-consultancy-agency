@@ -2,17 +2,17 @@
 const primaryColor = "#9867FF";
 </script>
 <template>
-    <section class="container mx-auto">
+    <section>
         <div>
             <h4 class="text-xl font-bold text-center" :style="`color:${primaryColor}`">/ who we are /</h4>
             <h1 class="mt-2 mb-16 text-5xl font-extrabold text-center">A Leading Global Provider <br> Of Recruitment
             </h1>
 
-            <div class="grid grid-cols-1 gap-10 md:grid-cols-3">
-                <div>
+            <div class="grid grid-cols-1 gap-2 md:grid-cols-4">
+                <div class="col-span-2">
                     <img src="@/assets/img/home-about.jpg" alt="">
                 </div>
-                <div class="col-span-2 mx-8">
+                <div class="col-span-2">
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
                         doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
                         veritatis et quasi architecto beatae.</p>

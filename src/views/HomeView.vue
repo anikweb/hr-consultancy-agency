@@ -2,7 +2,7 @@
 import Hero from '@/components/Hero.vue';
 import HomeAbout from '@/components/HomeAbout.vue';
 import HomeCard from '@/components/HomeCard.vue';
-
+import HomeCounter from '@/components/HomeCounter.vue'
 const homeCards = [
     {
         "icon": `<svg xmlns="http://www.w3.org/2000/svg" width="49" height="50" viewBox="0 0 49 50" fill="none">
@@ -54,5 +54,13 @@ const homeCards = [
         <HomeCard v-for="(card, index) in homeCards" :key="index" :icon="card.icon" :title="card.title"
             :bgColorClass="card.bgColorClass" :subtitle="card.subtitle" />
     </div>
-    <HomeAbout />
+
+    <section class="container px-32 mx-auto">
+        <HomeAbout />
+    </section>
+
+    <section class="container mx-auto px-52">
+        <HomeCounter />
+    </section>
+
 </template>
